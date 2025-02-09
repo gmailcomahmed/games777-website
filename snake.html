@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لعبة الثعبان</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            text-align: center;
+            background-color: #222;
+            color: white;
+            position: relative;
+        }
+        canvas {
+            background: black;
+            display: block;
+            margin: auto;
+        }
+        .info {
+            font-size: 20px;
+            margin: 10px;
+            position: absolute;
+        }
+        .timer { top: 10px; left: 10px; }
+        .score { top: 10px; right: 10px; }
+        .countdown {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 50px;
+            font-weight: bold;
+            color: red;
+            display: none;
+        }
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+        .controls button {
+            padding: 10px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        #fullscreenBtn {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            padding: 10px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>لعبة الثعبان</h1>
+    <div class="info timer">الوقت: <span id="time">0</span> ثانية</div>
+    <div class="info score">التفاحات: <span id="apples">0</span></div>
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <div class="countdown" id="countdown"></div>
+    
+    </div>
+    
+    <button id="fullscreenBtn" onclick="toggleFullScreen()">ملء الشاشة</button>
+
+    <script src="snake.js"></script>
+</body>
+</html>

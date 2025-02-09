@@ -1,0 +1,2 @@
+User-111222505111222: *
+Disallow: /public/
