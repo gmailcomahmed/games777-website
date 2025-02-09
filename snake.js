@@ -57,6 +57,11 @@ function drawGame() {
     ctx.fillStyle = "black";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+    // رسم الحدود باللون الأبيض
+    ctx.strokeStyle = "white";
+    ctx.lineWidth = 5;
+    ctx.strokeRect(0, 0, canvas.width, canvas.height);
+
     ctx.fillStyle = "red";
     ctx.fillRect(food.x, food.y, 20, 20);
 
